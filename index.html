@@ -7,106 +7,65 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/lux/bootstrap.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Reading List</title>
   </head>
   <body>
     <!--Nav-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Reading List</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarColor02"
-        aria-controls="navbarColor02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand text-info" href="#">Reading List</a>
 
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
+          <li class="nav-item active"></li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
+            <a class="nav-link" href="#">Track your current favorite books</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
     <!--Search-->
     <div class="form-group">
-      <label class="col-form-label" for="inputDefault">Title</label>
+      <label class="col-form-label m-2" for="inputDefault"> | Title |</label>
       <input
         type="text"
-        class="form-control"
+        class="form-control m-2"
         placeholder="The Catcher in the Rye"
         id="inputDefault"
       />
     </div>
     <div class="form-group">
-      <label class="col-form-label" for="inputDefault">Author</label>
+      <label class="col-form-label m-2" for="inputDefault">| Author |</label>
       <input
         type="text"
-        class="form-control"
+        class="form-control m-2"
         placeholder="J. D. Salinger"
         id="inputDefault"
       />
     </div>
     <div class="form-group">
-      <label class="col-form-label" for="inputDefault">ISBN #</label>
+      <label class="col-form-label m-2" for="inputDefault"> | ISBN # |</label>
       <input
         type="text"
-        class="form-control"
+        class="form-control m-2"
         placeholder="9787543321724"
         id="inputDefault"
       />
     </div>
-    <button type="button" class="btn btn-outline-primary">Submit</button>
-    <br />
     <hr />
     <br />
+    <button
+      id="submit"
+      type="button"
+      class="btn btn-outline-info w-25 ml-5 text-primary bg-info border-dark"
+    >
+      Submit
+    </button>
+    <br />
+
+    <br />
     <!--Table-->
-    <table class="table table-hover">
+    <table class="table table-hover bg-dark text-info">
       <thead>
         <tr>
           <th scope="col">Title</th>
@@ -115,7 +74,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-primary">
+        <tr class="table-info">
           <th scope="row">Info</th>
           <td>Column content</td>
           <td>Column content</td>
