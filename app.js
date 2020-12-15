@@ -14,7 +14,7 @@ function Entry(title, author, number) {
 }
 //show alert
 function showAlert() {
-  alertControl.setAttribute("class", "collapse.show");
+  alertControl.removeAttribute("class", "collapse.show");
 }
 
 //Handle Alert Btn
