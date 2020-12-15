@@ -6,6 +6,8 @@ const tableEntry = document.getElementById("table-entry");
 const alert = document.getElementById("alert");
 const alertDlt = document.querySelector(".close");
 const alertControl = document.querySelector(".alert");
+
+console.log(tableEntry);
 //Entry construcotr for each title, author, and number input
 function Entry(title, author, number) {
   this.title = title;
@@ -28,6 +30,14 @@ function handleDlt(e) {
 //Leave empty for prototype methods
 function Table() {}
 
+//prototype for deleting a book from the DOM
+//Want to remove the Tr element
+Table.prototype.deleteBook = function (target) {
+  if (target.className === "close mr-3 delete") {
+    target.parentElement.parentElement.remove();
+  }
+};
+
 //newRow (appending new books)
 //Pass in Entry!
 Table.prototype.addRow = function (entry) {
@@ -36,7 +46,8 @@ Table.prototype.addRow = function (entry) {
   newRow.innerHTML = `
     <th scope="row">${entry.author}</th>
     <td>${entry.title}</td>
-    <td>${entry.number}</td>`;
+    <td>${entry.number}</td>
+    <td><button type="button" class="close mr-3 delete" data-dismiss="alert">&times;</button></td>`;
   tableEntry.appendChild(newRow);
 };
 
@@ -73,3 +84,11 @@ function submit(e) {
     table.clearInputs();
   }
 }
+
+//Event handling the deleting a book
+tableEntry.addEventListener("click", function (e) {
+  const table = new Table();
+  console.log("clicked");
+  table.deleteBook(e.target);
+  e.preventDefault();
+});
