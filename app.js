@@ -88,7 +88,7 @@ function submit(e) {
 //Event handling the deleting a book
 tableEntry.addEventListener("click", function (e) {
   const table = new Table();
-  console.log("clicked");
+  // console.log("clicked");
   table.deleteBook(e.target);
   e.preventDefault();
 });
