@@ -3,12 +3,25 @@ const authorInput = document.getElementById("input-author");
 const numberInput = document.getElementById("input-number");
 const submitBtn = document.getElementById("submit-btn");
 const tableEntry = document.getElementById("table-entry");
-
+const alert = document.getElementById("alert");
+const alertDlt = document.querySelector(".close");
+const alertControl = document.querySelector(".alert");
 //Entry construcotr for each title, author, and number input
 function Entry(title, author, number) {
   this.title = title;
   this.author = author;
   this.number = number;
+}
+//show alert
+function showAlert() {
+  alertControl.setAttribute("class", "collapse.show");
+}
+
+//Handle Alert Btn
+alertDlt.addEventListener("click", handleDlt);
+function handleDlt(e) {
+  e.preventDefault();
+  alertControl.setAttribute("class", "collapse");
 }
 
 // Table constructor
@@ -50,9 +63,13 @@ function submit(e) {
   //new Instantiate Table constructor
   const table = new Table();
 
-  //Add book to list
-  //Pass in Entry object
-  table.addRow(entry);
-  ///Clear input fields (call function) = leave empty
-  table.clearInputs();
+  if (title === " " || author === " " || number === "") {
+    showAlert();
+  } else {
+    //Add book to list
+    //Pass in Entry object
+    table.addRow(entry);
+    ///Clear input fields (call function) = leave empty
+    table.clearInputs();
+  }
 }
