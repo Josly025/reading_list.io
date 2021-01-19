@@ -78,6 +78,8 @@ function submit(e) {
     showAlert();
   } else {
     //Add book to list
+    Storage.submitBook(entry);
+
     //Pass in Entry object
     table.addRow(entry);
     ///Clear input fields (call function) = leave empty
@@ -92,3 +94,19 @@ tableEntry.addEventListener("click", function (e) {
   table.deleteBook(e.target);
   e.preventDefault();
 });
+
+// Implementing Local Storage
+
+class Storage {
+  static getBooks() {
+
+    let books; 
+    if(localStorage.getItem("books" === null){
+      let books = [];
+    })
+  }
+  static renderBooks() {}
+  static submitBook() {}
+
+  static deleteBook() {}
+}
