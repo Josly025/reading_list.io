@@ -57,3 +57,7 @@ you can delete the added book and add new replacement.
 ![Deployed Link](https://josly025.github.io/reading_list.io/)
 
 ![GitHub Repo](https://github.com/Josly025/reading_list.io.git)
+
+# reading_list.io
+
+- A reading list to track books you would like to read or your favorites!
