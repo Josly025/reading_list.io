@@ -2,7 +2,7 @@
 
 #### Reading List
 
-![GitHub_Finder](./images/grant_portfolio.png)
+![Reading List](./images/reading_list.png)
 
 ## Description \*\*\*
 
